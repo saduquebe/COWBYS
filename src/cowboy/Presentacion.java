@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cowboy;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Toolkit;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author Santiago
+ */
+public class Presentacion extends JPanel{
+private JButton iniciar;
+
+    public Presentacion() {
+        this.iniciar = new JButton();
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g); 
+        g.drawImage(Toolkit.getDefaultToolkit().getImage("fondo.png"), 0,-60, this);
+        this.iniciar.setText("START");
+        this.iniciar.setLocation((1920/2),(1080/2));
+        add(this.iniciar);
+    }
+    
+}
